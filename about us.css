@@ -1,0 +1,44 @@
+.marketing{
+    margin-top: 50px;
+}
+.bd-placeholder-img {
+    margin-left: 100px;
+
+  }
+  p,h2 {
+    margin-left: 50px;
+    margin-top:20px
+
+  }
+  header{
+    background-color:#184a4f;
+    box-shadow: 5px 5px #f5f5f5;
+    width:100%;}
+    
+
+    section#header {
+      width: 100%;
+    }
+
+  .container{
+    width:100%;
+  }
+  
+  .rounded-circle{
+      padding: 50px;
+      transition: transform .2s; /* Animation */
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      filter: grayscale(60%);
+    
+    }
+
+img:hover {
+transform: scale(1.5);
+filter: none;
+}
+
+li{
+  margin-top:35px;
+}

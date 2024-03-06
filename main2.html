@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+  <style>
+  
+  /* Common styles for all screen sizes */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+#title {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Navigation styles */
+.primary-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 1.5rem;
+  background: rgb(16, 16, 138);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-list a {
+  color: rgb(96, 142, 179);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Title section styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.d-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.btn {
+  background-color: #fff;
+  color: #2193d8;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Testimonial styles */
+#testimonial {
+  display: flex;
+  justify-content: space-around;
+}
+
+.testimonial-content {
+  text-align: center;
+  background-color: beige;
+  margin-left: 10px;
+}
+
+.testimonial-content:hover {
+  transform: scale(1.1);
+  border-color: #555;
+}
+
+.user-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+}
+
+.user-name {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+}
+
+/* Media queries for laptop and Android phone dimensions */
+@media (min-width: 768px) {
+  /* Styles for screens larger than 768px (laptops and tablets) */
+
+  #title {
+    height: 70vh;
+  }
+
+  #about,
+  #why,
+  #author {
+    height: 80vh;
+  }
+
+  .img-author {
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for screens smaller than 768px (Android phones) */
+
+  #title {
+    height: 50vh;
+  }
+
+  #about,
+  #why,
+  #author {
+    height: 120vh;
+    text-align: justify;
+    text-wrap: fit;
+    font-size:smaller ;
+  }
+
+  .img-author {
+  /* Common styles for all screen sizes */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+#title {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Navigation styles */
+.primary-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 1.5rem;
+  background: rgb(16, 16, 138);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav-list a {
+  color: rgb(96, 142, 179);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Title section styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.d-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.btn {
+  background-color: #fff;
+  color: #2193d8;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Testimonial styles */
+#testimonial {
+  display: flex;
+  justify-content: space-around;
+}
+
+.testimonial-content {
+  text-align: center;
+  background-color: beige;
+  margin-left: 10px;
+}
+
+.testimonial-content:hover {
+  transform: scale(1.1);
+  border-color: #555;
+}
+
+.user-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+}
+
+.user-name {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+}
+
+/* Media queries for laptop and Android phone dimensions */
+@media (min-width: 768px) {
+  /* Styles for screens larger than 768px (laptops and tablets) */
+
+  #title {
+    height: 70vh;
+  }
+
+  #about,
+  #why,
+  #author {
+    height: 80vh;
+  }
+
+  .img-author {
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Styles for screens smaller than 768px (Android phones) */
+
+  #title {
+    height: 50vh;
+  }
+
+  #about,
+  #why,
+  #author {
+    height: 120vh;
+  }
+
+  .img-author {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.testimonial-content {
+  animation: testimonialAnimation 1s ease-out;
+}
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding: var(--scroll-padding, 5rem);
+      }
+      
+      .primary-navigation {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-size: 1.5rem;
+        background: rgb(16, 16, 138);
+
+      }
+      
+      .nav-list {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        list-style: none;
+      }
+      
+      .nav-list a {
+        color: rgb(96, 142, 179);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      
+      /* general styling */
+      
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+      }
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        gap: var(--gap, var(--size-400));
+      }
+      
+      .flex-flow {
+        display: flex;
+        flex-direction: column;
+        gap: var(--flow-space, var(--size-400));
+      }
+      
+      .text-center .flex {
+        margin: 0 auto;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+          scroll-behavior: auto;
+        }
+      
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    #title {
+      background: linear-gradient(#063C72,#2477CB);
+      color: #f9efef;
+      padding: 50px 0;
+      height: 90vh;
+    }
+    #why {
+    
+      padding: 50px 0;
+      height: 100vh;
+      background-color: #2477CB;
+    }
+
+    #about {
+      background-color: aliceblue;
+      padding: 50px 0;
+      height: 100vh;
+      
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo{
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .d-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #2193d8;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    #what{
+        text-align: center;
+        
+        
+    }
+    p{
+        font-size:  1.5rem;
+        margin-left:10%;
+        margin-right: 10%;
+        margin-top:5%;
+    }
+    .img-author{
+
+        width: 200px;
+        height:200px;
+        margin-right: 60px;
+        margin-top:200px;
+        margin-bottom:200px
+    }
+    #footer{
+      background-color:blue;
+    }
+
+    #testimonial {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .testimonial-content {
+            text-align: center;
+            background-color:beige;
+            margin-left: 10px;
+        }
+        .testimonial-content:hover{
+            transform: scale(1.1);
+            border-color: #555;
+
+        }
+        .user-photo {
+            border-radius: 50%;
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-top: 15px;
+        }
+
+        .user-name {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+        }
+  </style>
+</head>
+
+<body>
+    <nav class="primary-navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#author">Author</a></li>
+          <li><a href="#testimonial">Testimonies</a></li>
+        </ul>
+      </nav>
+  <section id="title">
+    <div class="gradient-background">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="./logo.png" width="700" height="200" id="logo">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+              Welcome to Inspire me now
+            </h1>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="./choice.html">  <button type="button" class="btn btn-light btn-lg px-4 me-md-2">Try now</button>
+            </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="col-4"><h1 id="what">What is Inspire me now</h1></div>
+    <p align="center">🌟Welcome to Inspire Me Now, your daily dose of inspiration! 🌟<br>
+
+        At Inspire Me Now, we believe in the transformative power of words. Our platform is dedicated to delivering a carefully curated collection of quotes from a diverse range of thinkers, leaders, and visionaries. These words are designed to uplift, motivate, and spark positive change in your life.
+        
+        Whether you're facing challenges, pursuing your goals, or simply seeking a daily boost of positivity, Inspire Me Now is here for you. Explore our collection of inspirational quotes that cover various aspects of life, from success and courage to happiness and resilience.
+        
+        Ready to be inspired? Click the "Inspire Me" button to receive a randomly selected quote that might just be the motivation you need today.
+        
+        Join us on this journey of inspiration, empowerment, and positive transformation. Let the words guide you towards a more inspired and fulfilling life.</h2>
+    </section>
+
+
+    <section id="why">
+        <div>why us</div>
+    </section>
+
+
+    <section id="author">
+        <h1 id="what">Author</h1>
+        <p>
+        <marquee>
+        <img src="./abdul kalam .jpg" alt="abdul kalam"  class="img-author">
+        <img src="./Albert Schweitzer .jpg" alt="Albert Schweitzer" class="img-author">
+        <img src="./helen keller.jpg" alt="helen keller" class="img-author">
+        <img src="./martin lurther king.jpg" alt="martin lurther king" class="img-author">
+        <img src="./Maya Angelou.jpg" alt="maya Angelou" class="img-author">
+        <img src="./steve jobs.jpg" alt="steve jobs" class="img-author">
+        <img src="./nelson mandela.jpg" alt="nelson mandela" class="img-author">
+    </section></marquee>
+
+
+      <h1 align="center">Testimonial</h1><br><br><br>
+      <section id="testimonial">
+        <div class="testimonial-content">
+            <img src="tanish.png" alt="User Photo" class="user-photo">
+            <h2 class="user-name">Tanish Singh</h2>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    
+        <div class="testimonial-content">
+            <img src="suraj.jpg" alt="User Photo" class="user-photo">
+            <h2 class="user-name">Suraj Setia</h2>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    
+      
+        <div class="testimonial-content">
+            <img src="anish.jpg" alt="User Photo" class="user-photo">
+            <h2 class="user-name">Anish Thakur</h2>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    
+  
+
+    </section>
+
+        <br><br><br><br>
+    
+    
+    
+    <section id="footer">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+</html>

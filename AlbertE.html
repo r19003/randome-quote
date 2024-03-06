@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alberte.css">
+    
+    <title>Wanderlust Wisdom</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="background-color:#f5f5f5;">
+    <section id="header">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="./login.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          
+                <img class="bi me-2" width="100" height="100px" id="image" src="./logo.png" />
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4" style="text-shadow: 2px 2px 4px rgba(95, 214, 159, 0.8);color:white;">Inspire Me Now</span>
+              </a>
+        
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="AlbertE.html" class="nav-link " aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./favourite.html" class="nav-link">Favourite</a></li>
+                <li class="nav-item"><a href="./author.html" class="nav-link">Authors</a></li>
+                <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact us</a></li>
+                <li class="nav-item"><a href="./about us.html" class="nav-link">About us</a></li>
+              </ul>
+            </header>
+          </div>
+    
+          </section>
+        
+            
+        </header>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="choice.html">change</a>
+                <a href="loginsamp.html">signout</a>
+                
+            </div>
+        </div>
+    <section class="hero" >
+      
+        <div class="hero-content">
+            
+            <h1 id="h1">Embark on a Journey of Wisdom</h1>
+            <p id="text" class=".blur-animation">Discover inspiring quotes from Albert Einstein .</p><br><br>
+            
+            <button class="button">Generate Quote</button>
+
+            <button id="button" class="bookmark">Bookmark</button>
+          <br><br>
+            <button id="shareBtn" class="button">SHARE</button>  
+          </div>
+
+        </div>
+    </section>
+
+
+    
+
+  
+
+    <footer>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            
+          </ul>
+        </footer>
+      </div>
+    </footer>
+    <script >
+      const bookmark = document.getElementById("bookmark");
+const color = [];
+const text = document.getElementById("h1");
+let quote1 = "";
+ document.querySelector(".button").addEventListener("click", function () {
+  const textElement = document.getElementById("text");
+  // Add the blur class to start the blur animation
+  textElement.classList.add("blur-animation");
+  text.classList.add("blur-animation");
+
+  setTimeout(function () {
+    const number = Math.floor(Math.random() * quotes.length);
+    const newQuote = quotes[number];
+    document.getElementById("text").innerHTML = newQuote;
+
+    // Remove the blur class after 2 seconds
+    setTimeout(function () {
+      textElement.classList.remove("blur-animation");
+      text.classList.remove("blur-animation");
+    });
+  }, 1000);
+});
+
+
+
+
+  
+document.querySelector(".bookmark").addEventListener("click", function () {
+  alert("Bookmark Added");
+ 
+});
+
+const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+  // Check for Web Share API support
+  if (navigator.share) {
+    // Browser supports native share API
+    navigator.share({
+      text: quote1,
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    }).catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link");
+  }
+});
+const quotes = [
+    "Imagination is more important than knowledge.",
+    "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    "The only source of knowledge is experience.",
+    "Logic will get you from A to B. Imagination will take you everywhere.",
+    "Strive not to be a success, but rather to be of value.",
+    "The true sign of intelligence is not knowledge but imagination.",
+    "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.",
+    "Anyone who has never made a mistake has never tried anything new.",
+    "Peace cannot be kept by force; it can only be achieved by understanding.",
+    "The difference between stupidity and genius is that genius has its limits.",
+    "Life is just like a bicycle, to keep your balance, you must keep moving.",
+    "The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.",
+    "If you want to live a happy life, tie it to a goal, not to people or objects.",
+    "Everything should be made as simple as possible, but not simpler.",
+    "Try not to become a person of success, but rather try to become a person of value.",
+    "The only thing that interferes with my learning is my education.",
+    "I have no special talent. I am only passionately curious.",
+    "A person who never made a mistake never tried anything new.",
+    "A clever person solves a problem. A wise person avoids it.",
+    "We cannot solve our problems with the same thinking we used when we created them.",
+    "It's not that I'm so smart, it's just that I stay with problems longer.",
+    "The important thing is not to stop questioning. Curiosity has its own reason for existence.",
+    "The only way to do great work is to love what you do.",
+    "Education is what remains after one has forgotten what one has learned in school.",
+    "The measure of intelligence is the ability to change.",
+    "We can't solve problems by using the same kind of thinking we used when we created them.",
+    "Insanity is doing the same thing over and over again and expecting different results.",
+    "A person who never made a mistake never tried anything new.",
+    "I live in that solitude which is painful in youth, but delicious in the years of maturity.",
+    "The world will not be destroyed by those who do evil, but by those who watch them without doing anything.",
+]
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+

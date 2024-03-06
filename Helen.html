@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="helen.css">
+    
+    <title>Wanderlust Wisdom</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="background-color:#f5f5f5;">
+    <section id="header">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="./login.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          
+                <img class="bi me-2" width="100" height="100px" id="image" src="./logo.png" />
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4" style="text-shadow: 2px 2px 4px rgba(95, 214, 159, 0.8);color:white;">Inspire Me Now</span>
+              </a>
+        
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="Helen.html" class="nav-link " aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./favourite.html" class="nav-link">Favourite</a></li>
+                <li class="nav-item"><a href="./author.html" class="nav-link">Authors</a></li>
+                <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact us</a></li>
+                <li class="nav-item"><a href="./about us.html" class="nav-link">About us</a></li>
+              </ul>
+            </header>
+          </div>
+    
+          </section>
+        
+            
+        </header>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="choice.html">change</a>
+                <a href="loginsamp.html">signout</a>
+                
+            </div>
+        </div>
+    <section class="hero" >
+      
+        <div class="hero-content">
+            
+            <h1 id="h1">Embark on a Journey of Wisdom</h1>
+            <p id="text" class=".blur-animation">Discover inspiring quotes from Helen Keller.</p><br><br>
+            
+            <button class="button">Generate Quote</button>
+
+            <button id="button" class="bookmark">Bookmark</button>
+          <br><br>
+            <button id="shareBtn" class="button">SHARE</button>  
+          </div>
+
+        </div>
+    </section>
+
+
+    
+
+  
+
+    <footer>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            
+          </ul>
+        </footer>
+      </div>
+    </footer>
+    <script >
+      const bookmark = document.getElementById("bookmark");
+const color = [];
+const text = document.getElementById("h1");
+let quote1 = "";
+ document.querySelector(".button").addEventListener("click", function () {
+  const textElement = document.getElementById("text");
+  // Add the blur class to start the blur animation
+  textElement.classList.add("blur-animation");
+  text.classList.add("blur-animation");
+
+  setTimeout(function () {
+    const number = Math.floor(Math.random() * quotes.length);
+    const newQuote = quotes[number];
+    document.getElementById("text").innerHTML = newQuote;
+
+    // Remove the blur class after 2 seconds
+    setTimeout(function () {
+      textElement.classList.remove("blur-animation");
+      text.classList.remove("blur-animation");
+    });
+  }, 1000);
+});
+
+
+
+
+  
+document.querySelector(".bookmark").addEventListener("click", function () {
+  alert("Bookmark Added");
+ 
+});
+
+const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+  // Check for Web Share API support
+  if (navigator.share) {
+    // Browser supports native share API
+    navigator.share({
+      text: quote1,
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    }).catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link");
+  }
+});
+const quotes= [
+    "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+    "Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success achieved.",
+    "Alone we can do so little; together we can do so much.",
+    "The only thing worse than being blind is having sight but no vision.",
+    "Life is either a daring adventure or nothing at all.",
+    "What we have once enjoyed we can never lose. All that we love deeply becomes a part of us.",
+    "The highest result of education is tolerance.",
+    "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
+    "The marvelous richness of human experience would lose something of rewarding joy if there were no limitations to overcome. The hilltop hour would not be half so wonderful if there were no dark valleys to traverse.",
+    "Although the world is full of suffering, it is also full of the overcoming of it.",
+    "When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.",
+    "Security is mostly a superstition. Life is either a daring adventure or nothing.",
+    "I can see, and that is why I can be happy, in what you call the dark, but which to me is golden. I can see a God-made world, not a manmade world.",
+    "No pessimist ever discovered the secrets of the stars, or sailed to an uncharted land, or opened a new heaven to the human spirit.",
+    "Keep your face to the sunshine and you cannot see a shadow.",
+    "The heresy of one age becomes the orthodoxy of the next.",
+    "Faith is the strength by which a shattered world shall emerge into the light.",
+    "Self-pity is our worst enemy and if we yield to it, we can never do anything wise in this world.",
+    "The greatest day in your life and mine is when we take total responsibility for our attitudes. That's the day we truly grow up.",
+    "We could never learn to be brave and patient, if there were only joy in the world.",
+    "It is a terrible thing to see and have no vision.",
+    "What I'm looking for is not out there, it is in me.",
+    "Blindness cuts us off from things, but deafness cuts us off from people.",
+    "Your success and happiness lie in you. Resolve to keep happy, and your joy and you shall form an invincible host against difficulties.",
+    "The only way to do great work is to love what you do.",
+    "Never bend your head. Always hold it high. Look the world straight in the eye.",
+    "No one has a right to consume happiness without producing it.",
+    "Everything has its wonders, even darkness and silence, and I learn, whatever state I may be in, therein to be content.",
+    "What we once enjoyed and deeply loved we can never lose, for all that we love deeply becomes part of us.",
+]
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

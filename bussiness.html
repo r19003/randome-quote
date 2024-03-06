@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bus.css">
+    
+    <title>Wanderlust Wisdom</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="background-color:#f5f5f5;">
+    <section id="header">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="./login.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          
+                <img class="bi me-2" width="100" height="100px" id="image" src="./logo.png" />
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4" style="text-shadow: 2px 2px 4px rgba(95, 214, 159, 0.8);color:white;">Inspire Me Now</span>
+              </a>
+        
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="bussiness.html" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./favourite.html" class="nav-link">Favourite</a></li>
+                <li class="nav-item"><a href="./author.html" class="nav-link">Authors</a></li>
+                <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact us</a></li>
+                <li class="nav-item"><a href="./about us.html" class="nav-link">About us</a></li>
+              </ul>
+            </header>
+          </div>
+    
+          </section>
+        
+            
+        </header>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="choice.html">change</a>
+                <a href="loginsamp.html">signout</a>
+                
+            </div>
+        </div>
+    <section class="hero" >
+      
+        <div class="hero-content">
+            
+            <h1 id="h1">Embark on a Journey of Wisdom</h1>
+            <p id="text" class=".blur-animation">Discover Business and Innovtive  quotes from around the world.</p><br><br>
+            
+            <button class="button">Generate Quote</button>
+
+            <button id="button" class="bookmark">Bookmark</button>
+          <br><br>
+            <button id="shareBtn" class="button">SHARE</button>  
+          </div>
+
+        </div>
+    </section>
+
+
+    
+
+  
+
+    <footer>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            
+          </ul>
+        </footer>
+      </div>
+    </footer>
+    <script>
+      const bookmark = document.getElementById("bookmark");
+const color = [];
+const text = document.getElementById("h1");
+let quote1 = "";
+ document.querySelector(".button").addEventListener("click", function () {
+  const textElement = document.getElementById("text");
+  // Add the blur class to start the blur animation
+  textElement.classList.add("blur-animation");
+  text.classList.add("blur-animation");
+
+  setTimeout(function () {
+    const number = Math.floor(Math.random() * quotes.length);
+    const newQuote = quotes[number];
+    document.getElementById("text").innerHTML = newQuote;
+
+    // Remove the blur class after 2 seconds
+    setTimeout(function () {
+      textElement.classList.remove("blur-animation");
+      text.classList.remove("blur-animation");
+    });
+  }, 1000);
+});
+
+
+
+
+  
+document.querySelector(".bookmark").addEventListener("click", function () {
+  alert("Bookmark Added");
+ 
+});
+
+const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+  // Check for Web Share API support
+  if (navigator.share) {
+    // Browser supports native share API
+    navigator.share({
+      text: quote1,
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    }).catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link");
+  }
+});
+const quotes=["Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. --STEVE JOBS",
+  "Innovation distinguishes between a leader and a follower. --STEVE JOBS",
+  "Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart. --STEVE JOBS",
+  "Stay hungry, stay foolish.",
+  "Your time is limited, so don't waste it living someone else's life. --STEVE JOBS",
+  "The people who are crazy enough to think they can change the world are the ones who do. --STEVE JOBS",
+  "Design is not just what it looks like and feels like. Design is how it works. --STEVE JOBS",
+  "I want to put a ding in the universe --STEVE JOBS",
+  "Innovation comes from people meeting up in the hallways or calling each other at 10:30 at night with a new idea, or because they realized something that shoots holes in how we've been thinking about a problem. --STEVE JOBS",
+  "The people who are doing the work are the moving force behind the Macintosh. My job is to create a space for them, to clear out the rest of the organization and keep it at bay. --STEVE JOBS",
+  
+  // Mark Zuckerberg
+  "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy that is guaranteed to fail is not taking risks. --Mark Zuckerberg",
+  "The question I ask myself like almost every day is, 'Am I doing the most important thing I could be doing?' --Mark Zuckerberg",
+  "People can be really smart or have skills that are directly applicable, but if they don't really believe in it, then they are not going to really work hard. --Mark Zuckerberg",
+  "The Hacker Way is an approach to building that involves continuous improvement and iteration. --Mark Zuckerberg",
+  "The thing that we are trying to do at Facebook is just help people connect and communicate more efficiently. --Mark Zuckerberg",
+  "By giving people the power to share, we're making the world more transparent. --Mark Zuckerberg",
+  "The companies that work are the ones that people really care about and have a vision for the world, so do something you like. --Mark Zuckerberg",
+  "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough. --Mark Zuckerberg",
+  "We don't build services to make money; we make money to build better services. --Mark Zuckerberg",
+  "Simply put: we don't build services to make money; we make money to build better services. --Mark Zuckerberg",
+  
+  // Other Business and Innovation Quotes
+  "The only way to do great work is to love what you do. --Steve Jobs",
+  "Innovation distinguishes between a leader and a follower. --Steve Jobs",
+  "The best way to predict the future is to invent it. --Alan Kay",
+  "Your most unhappy customers are your greatest source of learning. --Bill Gates",
+  "Success is not final, failure is not fatal: It is the courage to continue that counts. --Winston Churchill",
+  "If you are not embarrassed by the first version of your product, you've launched too late. --Reid Hoffman",
+  "Don't be afraid to give up the good to go for the great. --John D. Rockefeller",
+  "In every success story, you will find someone who has made a courageous decision. --Peter F. Drucker",
+  "Don't be afraid to assert yourself, have confidence in your abilities, and don't let the bastards get you down. --Michael Bloomberg",
+  "If you want something new, you have to stop doing something old. --Peter F. Drucker",
+  "Success usually comes to those who are too busy to be looking for it. --Henry David Thoreau",
+  "The way to get started is to quit talking and begin doing. --Walt Disney",
+  "Every problem is a gift—without problems, we would not grow. --Tony Robbins",
+  "Your time is limited, don't waste it living someone else's life. --Steve Jobs",
+  "The function of leadership is to produce more leaders, not more followers. --Ralph Nader",
+  "The only place where success comes before work is in the dictionary. --Vidal Sassoon",
+  "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. --Steve Jobs",
+];
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

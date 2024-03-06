@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+  <style>
+    html {
+        scroll-behavior: smooth;
+        scroll-padding: var(--scroll-padding, 5rem);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+          scroll-behavior: auto;
+        }
+      
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+      
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding-top: 2rem;
+        font-size:50px ;
+        background: #063C72;
+
+      }
+      
+      .nav-list {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        list-style: none;
+      }
+      
+      .nav-list a {
+        color: rgb(96, 142, 179);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      
+      /* general styling */
+      
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+      }
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        width: fit-content;
+        gap: var(--gap, var(--size-400));
+      }
+      
+      .flex-flow {
+        display: flex;
+        flex-direction: column;
+        gap: var(--flow-space, var(--size-400));
+      }
+      
+      .text-center .flex {
+        margin: 0 auto;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+          scroll-behavior: auto;
+        }
+      
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    #title {
+      background: linear-gradient(#063C72,#2477CB);
+      color: #f9efef;
+      padding: 50px 0;
+      height: 90vh;
+    }
+    #why {
+    
+      padding: 50px 0;
+      height: 100vh;
+      background:linear-gradient( #6b9dcf, #87aacc,white);
+    }
+
+    #about {
+      background:linear-gradient(#2477CB,#377fc6,#6b9dcf) ;
+      padding: 50px 0;
+      height: 100vh;
+      
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo{
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .d-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #2193d8;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    #what{
+        text-align: center;
+        
+        
+    }
+    p{
+        font-size:  1.5rem;
+        margin-left:10%;
+        margin-right: 10%;
+        margin-top:5%;
+    }
+    .img-author{
+
+        width: 200px;
+        height:200px;
+        margin-right: 60px;
+        margin-top: 100px;
+        margin-bottom:100px
+    }
+    #footer{
+      background-color:blue;
+    }
+
+    #testimonial {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .testimonial-content {
+            text-align: center;
+            background-color:beige;
+            margin-left: 10px;
+        }
+        .testimonial-content:hover{
+            transform: scale(1.1);
+            border-color: #555;
+
+        }
+        .user-photo {
+            border-radius: 50%;
+            width: 100px; /* Adjust the size as needed */
+            height: 100px; /* Adjust the size as needed */
+            margin-top: 15px;
+        }
+
+        .user-name {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+        }
+  </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#author">Author</a></li>
+          <li><a href="#yoo">Testimonies</a></li>
+        </ul>
+      </nav>
+  <section id="title">
+    <div class="gradient-background">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="./logo.png" width="700" height="200" id="logo">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+              Welcome to Inspire me now
+            </h1>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="./choice.html">  <button type="button" class="btn btn-light btn-lg px-4 me-md-2">Try now</button>
+            </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="col-4"><h1 id="what">What is Inspire me now</h1></div>
+    <p align="center">🌟Welcome to Inspire Me Now, your daily dose of inspiration! 🌟<br>
+
+        At Inspire Me Now, we believe in the transformative power of words. Our platform is dedicated to delivering a carefully curated collection of quotes from a diverse range of thinkers, leaders, and visionaries. These words are designed to uplift, motivate, and spark positive change in your life.
+        
+        Whether you're facing challenges, pursuing your goals, or simply seeking a daily boost of positivity, Inspire Me Now is here for you. Explore our collection of inspirational quotes that cover various aspects of life, from success and courage to happiness and resilience.
+        
+        Ready to be inspired? Click the "Inspire Me" button to receive a randomly selected quote that might just be the motivation you need today.
+        
+        Join us on this journey of inspiration, empowerment, and positive transformation. Let the words guide you towards a more inspired and fulfilling life.</h2>
+    </section>
+
+
+    <section id="why">
+      <h1 align="center"> Why us?</h1>
+        <div>"<p>Now you might ask "why should i use this particular website for my daily dose of motivation". The simple answer to that is we strive to provide the best of the best for our users and will leave no stone unturned to to provide the most incredible experience to you.
+          Embrace daily inspiration with our Random Quote Generator, a distinctive platform designed to uplift and motivate users. What sets our website apart is its diverse and motivational content, offering a broad spectrum of quotes spanning various genres and featuring insights from renowned authors. Our commitment to a user-friendly interface ensures that individuals, regardless of their technical proficiency, can effortlessly navigate and generate quotes with a simple click. The efficiency and speed of our platform guarantee prompt access to inspirational content, enriching the user experience. With a responsive design catering to different devices, our website ensures a seamless and enjoyable journey for users across various platforms. Additionally, features like a blur effect, genre/author selection, and a share button contribute to a more interactive and personalized experience. Choose our website for a reliable, user-friendly, and feature-rich destination that seamlessly integrates daily motivation into your life.
+        </p>.</div>
+    </section>
+
+
+    <section id="author">
+        <h1 id="what">Author</h1>
+        <br>
+        <p align="center">"The words of one can set another's life into motion." we offer hundereds of quotes with words of wisdom, inspiration and motivation just one click away.
+
+          the spectacular and knowledgeable authors whose words  give us the will to do, to perserve and to persist through our lives with happiness in tow.</p>
+        <marquee>
+        <img src="./abdul kalam .jpg" alt="abdul kalam"  class="img-author">
+        <img src="./Albert Schweitzer .jpg" alt="Albert Schweitzer" class="img-author">
+        <img src="./helen keller.jpg" alt="helen keller" class="img-author">
+        <img src="./martin lurther king.jpg" alt="martin lurther king" class="img-author">
+        <img src="./Maya Angelou.jpg" alt="maya Angelou" class="img-author">
+        <img src="./steve jobs.jpg" alt="steve jobs" class="img-author">
+        <img src="./nelson mandela.jpg" alt="nelson mandela" class="img-author">
+    </section></marquee>
+
+
+    <h1 id="yoo" align="center" style="padding-top:10px;">Testimonial</h1><br><br><br>
+    <section id="testimonial">
+      <div class="testimonial-content">
+          <img src="tanish.png" alt="User Photo" class="user-photo">
+          <h2 class="user-name">Tanish Singh</h2>
+          <p class="testimonial-text">This is a very catchy and fun to use website.</p>
+      </div>
+  
+      <div class="testimonial-content">
+          <img src="suraj.jpg" alt="User Photo" class="user-photo">
+          <h2 class="user-name">Suraj Setia</h2>
+          <p class="testimonial-text">It is a very fantastic and inspiring website.</p>
+      </div>
+  
+    
+      <div class="testimonial-content">
+          <img src="anish.jpg" alt="User Photo" class="user-photo">
+          <h2 class="user-name">Anish Thakur</h2>
+          <p class="testimonial-text">They have very nice collection of quotes.</p>
+      </div>
+       
+</section>
+
+
+
+        <br><br><br><br>
+    
+    
+    
+    <section id="footer">
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          
+        </footer>
+      </div>
+    </section>
+
+</html>

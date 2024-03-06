@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="code.css">
+    
+    <title>Wanderlust Wisdom</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="background-color:#f5f5f5;">
+    <section id="header">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="./login.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          
+                <img class="bi me-2" width="100" height="100px" id="image" src="./logo.png" />
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4" style="text-shadow: 2px 2px 4px rgba(95, 214, 159, 0.8);color:white;">Inspire Me Now</span>
+              </a>
+        
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="motivational.html" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./favourite.html" class="nav-link">Favourite</a></li>
+                <li class="nav-item"><a href="./author.html" class="nav-link">Authors</a></li>
+                <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact us</a></li>
+                <li class="nav-item"><a href="./about us.html" class="nav-link">About us</a></li>
+              </ul>
+            </header>
+          </div>
+    
+          </section>
+        
+            
+        </header>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="choice.html">change</a>
+                <a href="loginsamp.html">signout</a>
+                
+            </div>
+        </div>
+    <section class="hero" >
+      
+        <div class="hero-content">
+            
+            <h1 id="h1">Embark on a Journey of Wisdom</h1>
+            <p id="text" class=".blur-animation">Discover motivational quotes from around the world.</p><br><br>
+            
+            <button class="button">Generate Quote</button>
+
+            <button id="button" class="bookmark">Bookmark</button>
+          <br><br>
+            <button id="shareBtn" class="button">SHARE</button>  
+          </div>
+
+        </div>
+    </section>
+
+
+    
+
+  
+
+    <footer>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            
+          </ul>
+        </footer>
+      </div>
+    </footer>
+
+
+    <script>
+const bookmark = document.getElementById("bookmark");
+const color = [];
+const text = document.getElementById("h1");
+let quote1 = "";
+ document.querySelector(".button").addEventListener("click", function () {
+  const textElement = document.getElementById("text");
+  // Add the blur class to start the blur animation
+  textElement.classList.add("blur-animation");
+  text.classList.add("blur-animation");
+
+  setTimeout(function () {
+    const number = Math.floor(Math.random() * quotes.length);
+    const newQuote = quotes[number];
+    document.getElementById("text").innerHTML = newQuote;
+
+    // Remove the blur class after 2 seconds
+    setTimeout(function () {
+      textElement.classList.remove("blur-animation");
+      text.classList.remove("blur-animation");
+    });
+  }, 1000);
+});
+
+
+
+
+  
+document.querySelector(".bookmark").addEventListener("click", function () {
+  alert("Bookmark Added");
+ 
+});
+
+const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+  // Check for Web Share API support
+  if (navigator.share) {
+    // Browser supports native share API
+    navigator.share({
+      text: quote1,
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    }).catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link");
+  }
+});
+
+
+const quotes = [
+    "You must do the thing you think you cannot do.    --ELEANOR ROOSEVELT",
+    "The future belongs to those who believe in the beauty of their dreams.    --ELEANOR ROOSEVELT",
+    "No one can make you feel inferior without your consent.    --ELEANOR ROOSEVELT",
+    "Great minds discuss ideas; average minds discuss events; small minds discuss people.   --ELEANOR ROOSEVELT",
+    "Happiness is not a goal; it is a by-product.   --ELEANOR ROOSEVELT",
+    "The only thing we have to fear is fear itself.    --ELEANOR ROOSEVELT",
+    "Friendship with oneself is all-important because without it, one cannot be friends with anyone else    --ELEANOR ROOSEVELT.",
+    "You gain strength, courage, and confidence by every experience in which you really stop to look fear in the face.     --ELEANOR ROOSEVELT",
+    "A woman is like a tea bag you never know how strong she is until she gets in hot water.      --ELEANOR ROOSEVELT",
+    "The purpose of life is to live it, to taste experience to the utmost, to reach out eagerly and without fear for newer and richer experience.      --ELEANOR ROOSEVELT",
+    // Steve Jobs
+    "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.---STEVE JOBS",
+    "Innovation distinguishes between a leader and a follower.  --STEVE JOBS",
+    "Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.---STEVE JOBS",
+    "Stay hungry, stay foolish.",
+    "Your time is limited, so don't waste it living someone else's life.  --STEVE JOBS",
+    "The people who are crazy enough to think they can change the world are the ones who do.  --STEVE JOBS",
+    "Design is not just what it looks like and feels like. Design is how it works.  --STEVE JOBS",
+    "I want to put a ding in the universe  --STEVE JOBS",
+    "Innovation comes from people meeting up in the hallways or calling each other at 10:30 at night with a new idea, or because they realized something that shoots holes in how we've been thinking about a problem.---STEVE JOBS",
+    "The people who are doing the work are the moving force behind the Macintosh. My job is to create a space for them, to clear out the rest of the organization and keep it at bay.---STEVE JOBS",
+    // Plato
+    "The first and greatest victory is to conquer yourself. --Plato",
+    "At the touch of love, everyone becomes a poet. --Plato",
+    "Ignorance, the root and stem of all evil. --Plato",
+    "One of the penalties for refusing to participate in politics is that you end up being governed by your inferiors. --Plato",
+    "Wise men speak because they have something to say; fools because they have to say something. --Plato",
+    "Courage is knowing what not to fear. --Plato",
+    "Justice means minding your own business and not meddling with other men's concerns. --Plato",
+    "The heaviest penalty for declining to rule is to be ruled by someone inferior to yourself. --Plato",
+    "An empty vessel makes the loudest sound, so they that have the least wit are the greatest babblers. --Plato",
+    "The measure of a man is what he does with power. --Plato",
+    "The direction in which education starts a man will determine his future in life. --Plato",
+    "At the touch of love, everyone becomes a poet. --Plato",
+    "The just man is happy, and the unjust man is miserable. --Plato",
+    "Philosophy begins in wonder. --Plato",
+    "Beauty of style and harmony and grace and good rhythm depend on simplicity. --Plato",
+    // Muhammad Ali
+    "Float like a butterfly, sting like a bee. --Muhammad Ali",
+    "I'm not the greatest, I'm the double greatest. Not only do I knock 'em out, I pick the round. --Muhammad Ali",
+    "Service to others is the rent you pay for your room here on Earth. --Muhammad Ali",
+    "It's hard to be humble when you're as great as I am. --Muhammad Ali",
+    "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.' --Muhammad Ali",
+    "I am the greatest. I said that even before I knew I was. --Muhammad Ali",
+    "I'm so fast that last night I turned off the light switch in my hotel room and was in bed before the room was dark. --Muhammad Ali",
+    "Don't count the days; make the days count. --Muhammad Ali",
+    "Impossible is just a big word thrown around by small men who find it easier to live in the world they've been given than to explore the power they have to change it. --Muhammad Ali",
+    "He who is not courageous enough to take risks will accomplish nothing in life. --Muhammad Ali",
+    "Live every day as if it were your last because someday you're going to be right. --Muhammad Ali",
+    "It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe. --Muhammad Ali",
+    // Martin Luther King Jr
+    "I have a dream that one day this nation will rise up and live out the true meaning of its creed: 'We hold these truths to be self-evident, that all men are created equal.' --Martin Luther King Jr.",
+    "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that. --Martin Luther King Jr.",
+    "Injustice anywhere is a threat to justice everywhere. --Martin Luther King Jr.",
+    "The time is always right to do what is right. --Martin Luther King Jr.",
+    "We must accept finite disappointment, but never lose infinite hope. --Martin Luther King Jr.",
+    "The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy. --Martin Luther King Jr.",
+    "I believe that unarmed truth and unconditional love will have the final word in reality. This is why right, temporarily defeated, is stronger than evil triumphant. --Martin Luther King Jr.",
+    "Our lives begin to end the day we become silent about things that matter. --Martin Luther King Jr.",
+    "The arc of the moral universe is long, but it bends toward justice. --Martin Luther King Jr.",
+    "Faith is taking the first step even when you don't see the whole staircase. --Martin Luther King Jr.",
+    "The ultimate tragedy is not the oppression and cruelty by the bad people but the silence over that by the good people. --Martin Luther King Jr.",
+    "Let no man pull you so low as to hate him. --Martin Luther King Jr.",
+    // Mark Zuckerberg
+    "The biggest risk is not taking any risk. In a world that's changing quickly, the only strategy that is guaranteed to fail is not taking risks. --Mark Zuckerberg",
+    "The question I ask myself like almost every day is, 'Am I doing the most important thing I could be doing?' --Mark Zuckerberg",
+    "People can be really smart or have skills that are directly applicable, but if they don't really believe in it, then they are not going to really work hard. --Mark Zuckerberg",
+    "The Hacker Way is an approach to building that involves continuous improvement and iteration. --Mark Zuckerberg",
+    "The thing that we are trying to do at Facebook is just help people connect and communicate more efficiently. --Mark Zuckerberg",
+    "By giving people the power to share, we're making the world more transparent. --Mark Zuckerberg",
+    "The companies that work are the ones that people really care about and have a vision for the world, so do something you like. --Mark Zuckerberg",
+    "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough. --Mark Zuckerberg",
+    "We don't build services to make money; we make money to build better services. --Mark Zuckerberg",
+    "Simply put: we don't build services to make money; we make money to build better services. --Mark Zuckerberg",
+// Elon Musk
+    "When something is important enough, you do it even if the odds are not in your favor. --Elon Musk",
+    "Patience is a virtue, and I'm learning patience. It's a tough lesson. --Elon Musk",
+    "I think it is possible for ordinary people to choose to be extraordinary. --Elon Musk",
+    "I could either watch it happen or be a part of it. --Elon Musk",
+    "If you get up in the morning and think the future is going to be better, it is a bright day. Otherwise, it's not. --Elon Musk",
+    "It's OK to have your eggs in one basket as long as you control what happens to that basket. --Elon Musk",
+    "The first step is to establish that something is possible; then, probability will occur. --Elon Musk",
+    "Failure is an option here. If things are not failing, you are not innovating enough. --Elon Musk",
+    "When I was in college, I wanted to be involved in things that would change the world. --Elon Musk",
+    "I'm interested in things that change the world or that affect the future and wondrous, new technology where you see it, and you're like, 'Wow, how did that even happen? How is that possible?' --Elon Musk",
+    // Albert Einstein
+    "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution. --Albert Einstein",
+    "The only source of knowledge is experience. --Albert Einstein",
+    "Life is like riding a bicycle. To keep your balance, you must keep moving. --Albert Einstein",
+    "Strive not to be a success, but rather to be of value. --Albert Einstein",
+    "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. --Albert Einstein",
+    "Education is what remains after one has forgotten what one has learned in school. --Albert Einstein",
+    "Logic will get you from A to B. Imagination will take you everywhere. --Albert Einstein",
+    "The only thing that interferes with my learning is my education. --Albert Einstein",
+    "Anyone who has never made a mistake has never tried anything new. --Albert Einstein",
+    "Life is like riding a bicycle. To keep your balance, you must keep moving. --Albert Einstein",
+    "The true sign of intelligence is not knowledge but imagination. --Albert Einstein",
+    "If you want to live a happy life, tie it to a goal, not to people or things. --Albert Einstein",
+    // Oprah Winfrey
+    "The more you praise and celebrate your life, the more there is in life to celebrate. --Oprah Winfrey",
+    "Doing the best at this moment puts you in the best place for the next moment. --Oprah Winfrey",
+    "You can have it all. Just not all at once. --Oprah Winfrey",
+    "Think like a queen. A queen is not afraid to fail. Failure is another steppingstone to greatness. --Oprah Winfrey",
+    "Surround yourself with only people who are going to lift you higher. --Oprah Winfrey",
+    "Turn your wounds into wisdom. --Oprah Winfrey",
+    "Breathe. Let go. And remind yourself that this very moment is the only one you know you have for sure. --Oprah Winfrey",
+    "The greatest discovery of all time is that a person can change his future by merely changing his attitude. --Oprah Winfrey",
+    "Challenges are gifts that force us to search for a new center of gravity. Don't fight them. Just find a new way to stand. --Oprah Winfrey",
+    "Real integrity is doing the right thing, knowing that nobody's going to know whether you did it or not. --Oprah Winfrey",
+    "True forgiveness is when you can say, 'Thank you for that experience.' --Oprah Winfrey",
+    // Bill Gates
+    "It's fine to celebrate success, but it is more important to heed the lessons of failure. --Bill Gates",
+    "Your most unhappy customers are your greatest source of learning. --Bill Gates",
+    "Don't compare yourself with anyone in this world. If you do so, you are insulting yourself. --Bill Gates",
+    "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten. --Bill Gates",
+    "To win big, you sometimes have to take big risks. --Bill Gates",
+    "Your time is limited, don't waste it living someone else's life. --Bill Gates",
+    "It's not your fault if you were born poor, but it is your fault if you die poor. --Bill Gates",
+    "If you are born poor, it's not your mistake. But if you die poor, it is your mistake. --Bill Gates",
+    "I failed in some subjects in exam, but my friend passed in all. Now, he is an engineer in Microsoft and I am the owner of Microsoft. --Bill Gates",
+    "I believe that if you show people the problems and you show them the solutions, they will be moved to act. --Bill Gates",
+    "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten. --Bill Gates",
+    "Don't let yourself be lulled into inaction. --Bill Gates",
+    "I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it. --Bill Gates",
+    // Walt Disney
+    "All our dreams can come true if we have the courage to pursue them. --Walt Disney",
+    "The way to get started is to quit talking and begin doing. --Walt Disney",
+    "If you can dream it, you can do it. --Walt Disney",
+    "The more you like yourself, the less you are like anyone else, which makes you unique. --Walt Disney",
+    "When you believe in a thing, believe in it all the way, implicitly and unquestionable. --Walt Disney",
+    "The way to get started is to quit talking and begin doing. --Walt Disney",
+    "It's kind of fun to do the impossible. --Walt Disney",
+    "The difference in winning and losing is most often not quitting. --Walt Disney",
+    "Why worry? If you've done the very best you can, worrying won't make it any better. --Walt Disney",
+    "If you can dream it, you can do it. --Walt Disney",
+    "The more you like yourself, the less you are like anyone else, which makes you unique. --Walt Disney",
+    "When you believe in a thing, believe in it all the way, implicitly and unquestionable. --Walt Disney",
+    "The way to get started is to quit talking and begin doing. --Walt Disney",
+    // Nelson Mandela
+    "It always seems impossible until it's done"
+];
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

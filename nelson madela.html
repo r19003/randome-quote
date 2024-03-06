@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nelson madela2.css">
+    
+    <title>Wanderlust Wisdom</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="background-color:#f5f5f5;">
+    <section id="header">
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="./login.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          
+                <img class="bi me-2" width="100" height="100px" id="image" src="./logo.png" />
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4" style="text-shadow: 2px 2px 4px rgba(95, 214, 159, 0.8);color:white;">Inspire Me Now</span>
+              </a>
+        
+              <ul class="nav ">
+                <li class="nav-item"><a href="nelson madela.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./favourite.html" class="nav-link">Favourite</a></li>
+                <li class="nav-item"><a href="./author.html" class="nav-link">Authors</a></li>
+                <li class="nav-item"><a href="contactus2.html" class="nav-link">Contact us</a></li>
+                <li class="nav-item"><a href="./about us.html" class="nav-link">About us</a></li>
+              </ul>
+            </header>
+          </div>
+    
+          </section>
+        
+            
+        </header>
+        <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="choice.html">change</a>
+                <a href="loginsamp.html">signout</a>
+                
+            </div>
+        </div>
+    <section class="hero" >
+      
+        <div class="hero-content">
+            
+            <h1 id="h1">Embark on a Journey of Wisdom</h1>
+            <p id="text" class=".blur-animation">Discover inspiring quotes from Nelson Mandela.</p><br><br>
+            
+            <button class="button">Generate Quote</button>
+
+            <button id="button" class="bookmark">Bookmark</button>
+          <br><br>
+            <button id="shareBtn" class="button">SHARE</button>  
+          </div>
+
+        </div>
+    </section>
+
+
+    
+
+  
+
+    <footer>
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+            
+          </ul>
+        </footer>
+      </div>
+    </footer>
+    <script >
+    const bookmark = document.getElementById("bookmark");
+const color = [];
+const text = document.getElementById("h1");
+let quote1 = "";
+ document.querySelector(".button").addEventListener("click", function () {
+  const textElement = document.getElementById("text");
+  // Add the blur class to start the blur animation
+  textElement.classList.add("blur-animation");
+  text.classList.add("blur-animation");
+
+  setTimeout(function () {
+    const number = Math.floor(Math.random() * quotes.length);
+    const newQuote = quotes[number];
+    document.getElementById("text").innerHTML = newQuote;
+
+    // Remove the blur class after 2 seconds
+    setTimeout(function () {
+      textElement.classList.remove("blur-animation");
+      text.classList.remove("blur-animation");
+    });
+  }, 1000);
+});
+
+
+
+
+  
+document.querySelector(".bookmark").addEventListener("click", function () {
+  alert("Bookmark Added");
+ 
+});
+
+const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+  // Check for Web Share API support
+  if (navigator.share) {
+    // Browser supports native share API
+    navigator.share({
+      text: quote1,
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    }).catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("The current browser does not support the share function. Please, manually share the link");
+  }
+});
+const quotes=[
+    "It is what we make out of what we have, not what we are given, that separates one person from another.",
+    "Real leaders must be ready to sacrifice all for the freedom of their people.",
+    "I stand here before you not as a prophet but as a humble servant of you, the people.",
+    "Our human compassion binds us the one to the other - not in pity or patronizingly, but as human beings who have learnt how to turn our common suffering into hope for the future.",
+    "Freedom is indivisible; the chains on any one of my people were the chains on all of them, the chains on all of my people were the chains on me.",
+    "To deny people their human rights is to challenge their very humanity.",
+    "Man’s goodness is a flame that can be hidden but never extinguished.",
+    "No one is born hating another person because of the color of his skin, or his background, or his religion. People must learn to hate, and if they can learn to hate, they can be taught to love.",
+    "Courageous people do not fear forgiving, for the sake of peace.",
+    "May your choices reflect your hopes, not your fears.",
+    "I am fundamentally an optimist. Whether that comes from nature or nurture, I cannot say. Part of being optimistic is keeping one’s head pointed toward the sun, one’s feet moving forward.",
+    "It always seems impossible until it's done.",
+    "A winner is a dreamer who never gives up.",
+    "Education is the great engine of personal development. It is through education that the daughter of a peasant can become a doctor, that the son of a mineworker can become the head of the mine, that a child of farmworkers can become the president of a great nation. It is what we make out of what we have, not what we are given, that separates one person from another.","The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    "Education is the most powerful weapon which you can use to change the world.",
+    "A good head and a good heart are always a formidable combination.",
+    "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
+    "It always seems impossible until it's done.",
+    "For to be free is not merely to cast off one's chains, but to live in a way that respects and enhances the freedom of others.",
+    "I am not a saint, unless you think of a saint as a sinner who keeps on trying.",
+    "I dream of an Africa which is in peace with itself.",
+    "Resentment is like drinking poison and then hoping it will kill your enemies.",
+    "Do not judge me by my successes, judge me by how many times I fell down and got back up again.",
+    "There is no passion to be found playing small - in settling for a life that is less than the one you are capable of living.",
+    "I like friends who have independent minds because they tend to make you see problems from all angles.",
+    "A good leader can engage in a debate frankly and thoroughly, knowing that at the end he and the other side must be closer, and thus emerge stronger. You don't have that idea when you are arrogant, superficial, and uninformed.",
+    "It is so easy to break down and destroy. The heroes are those who make peace and build.",
+    "The brave man is not he who does not feel afraid, but he who conquers that fear.",
+]
+
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
